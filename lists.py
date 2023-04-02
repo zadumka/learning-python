@@ -50,3 +50,6 @@ print(my_list1)
 ## піднести до квадрату всі числа в списку
 my_num = [x**2 for x in range(10)]
 print(my_num)
+
+my_list = [num for num in range(11) if num%2==0]
+print(my_list)

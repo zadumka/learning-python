@@ -61,3 +61,52 @@ print(my_lists)
 my_lists = ['one', 'two', 'three', 'six', 'ten', 'five', 'seven', 'six' ]
 my_lists.reverse()
 print(my_lists)
+
+# Dictionary Methods
+# clear(): видаляє всі елементи словника.
+my_dict = {'apple': 1, 'banana': 2, 'orange': 3}
+print(my_dict.clear())
+# copy(): повертає копію словника.
+my_dict = {'apple': 1, 'banana': 2, 'orange': 3}
+print(my_dict.copy())
+# fromkeys(seq, value): повертає словник, створений зі списку ключів seq, кожен з яких має значення value.
+my_lists = ['one', 'two', 'three', 'six', 'ten', 'five', 'seven', 'six' ]
+dict_lists = dict.fromkeys(my_lists, 0)
+print(dict_lists)
+# get(key, default=None): повертає значення ключа key, якщо він існує в словнику.
+# Якщо ключ не існує, повертається значення за замовчуванням default (якщо воно встановлено).
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+ten = dict_lists.get('ten')
+print(ten)
+# items(): повертає список пар "ключ-значення" в словнику.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+print(dict_lists.items())
+# keys(): повертає список ключів у словнику.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+print(dict_lists.keys())
+# pop(key, default=None): видаляє ключ key зі словника і повертає його значення.
+# Якщо ключ не знайдено, повертається значення за замовчуванням default (якщо воно встановлено).
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+delete_value = dict_lists.pop('six')
+print(delete_value)
+# popitem(): видаляє та повертає останню пару "ключ-значення" зі словника.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+print(dict_lists.popitem())
+
+# setdefault(key, default=None): повертає значення ключа key, якщо він існує в словнику.
+# Якщо ключ не існує, додає його зі значенням default (якщо воно встановлено)
+#і повертає значення за замовчуванням.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+two_value = dict_lists.setdefault('two', 12)
+print(two_value)
+
+twelve = dict_lists.setdefault('twelve', 12)
+print(twelve)
+# update(other): додає пари "ключ-значення" з іншого словника other до поточного словника.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+my_fruite = {'apple': 1, 'banana': 2, 'orange': 3}
+dict_lists.update(my_fruite)
+print(dict_lists)
+# values(): повертає список значень у словнику.
+dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
+print(dict_lists.values())
