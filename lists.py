@@ -47,7 +47,7 @@ for x in [2, 4, 6]:
         my_list1.append(x * y)
 print(my_list1)
 
-## піднести до квадрату всі числа в списку
+## Піднести до квадрату всі числа в списку
 my_num = [x**2 for x in range(10)]
 print(my_num)
 

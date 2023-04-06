@@ -12,7 +12,7 @@ print(s.lower())
 
 print(s.split())
 
-# Basic List Methods
+# *Basic List Methods:
 
 # append(item): Додає елемент item в кінець списку.
 # extend(iterable): Додає елементи з ітерабельного об'єкту iterable (наприклад, іншого списку) в кінець списку.
@@ -110,3 +110,14 @@ print(dict_lists)
 # values(): повертає список значень у словнику.
 dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 'seven': 7}
 print(dict_lists.values())
+
+
+#Basic Tuple Methods
+
+# index() - щоб ввести значення та повернути індекс
+my_tupl = (1, 3, 5, 'seven', 5, 3)
+print(my_tupl.index('seven'))
+
+# count() - щоб підрахувати кількість разів появи значення
+my_tupl = (1, 3, 5, 'seven', 5, 3)
+print(my_tupl.count(5))
