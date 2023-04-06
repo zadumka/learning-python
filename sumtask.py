@@ -10,7 +10,7 @@ for item in numList:
     if item.isdigit():
         num = int(item)
         if num > 1:
-            print(range(2,num))
+            #print(range(2,num))
             for i in range(2, num):
                 if num % i == 0:
                     break
