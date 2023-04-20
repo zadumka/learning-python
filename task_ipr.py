@@ -5,22 +5,43 @@
 myFile = open('task.txt')
 
 myList = myFile.read().split(' ')
-print(myList)
-numerList = []
-for item in myList:
-    item = item.replace(',','').replace('.','')
+
+def even_list(myList):
+    numberList = []
+    for item in myList:
+        item = item.replace(',','').replace('.','')
+        if item.isdigit():
+            num = int(item)
+            if num > 1:
+                for i in range(2,num):
+                    if num % i == 0:
+                        break
+                else:
+                    numberList.append(num)
+    return numberList
+
+numberList = even_list(myList)
+print(numberList)
+
+
+
+myFile = open('file.txt')
+myList = myFile.read().split(' ')
+
+numList = [str(item).replace(',', '').replace('.', '') for item in myList]
+
+newList = []
+for item in numList:
     if item.isdigit():
         num = int(item)
         if num > 1:
-            for i in range(2,num):
+
+            for i in range(2, num):
                 if num % i == 0:
                     break
             else:
-                numerList.append(num)
-
-print(numerList)
-
-
+                newList.append(int(item))
+print(newList)
 
 
 
