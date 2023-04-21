@@ -35,12 +35,11 @@ for item in numList:
     if item.isdigit():
         num = int(item)
         if num > 1:
-
             for i in range(2, num):
                 if num % i == 0:
                     break
             else:
-                newList.append(int(item))
+                newList.append(num)
 print(newList)
 
 
