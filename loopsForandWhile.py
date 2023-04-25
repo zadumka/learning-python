@@ -35,7 +35,45 @@ for element in my_list:
         break
     total2 += element
 
-print(total2)
-print(total1)
-print(total)
+#print(total2)
+#print(total1)
+#print(total)
+
+# ! Задача: Знайти сумму відємних чисел (двома способами, через цикл for, while)
+my_list1 = [4, 6, 7, 9, 10, 12, -5, -10, -15, -18]
+
+# ? цикл while
+total3 = 0
+i2 = 0
+while i2 <len(my_list1):
+    if my_list1[i2] < 0:
+        total3 += my_list1[i2]
+    i2 += 1
+#print(total3)
+
+# ? цикл for
+total4 = 0
+for i3 in my_list1:
+    if i3 < 0:
+
+        total4 += i3
+#print(total4)
+
+#! Задача: Вивести всі слова зі списки до ключового слова
+
+my_list2 = ['Понеділок', 'Вівторок', 'Середа', 'Stop', 'Четверг', 'Субота']
+
+for element in my_list2:
+    if element == 'Stop':
+        break
+#    print(element)
+
+#------------------------
+names = ['Alex', 'Nik', 'Tom', 'Mike']
+
+for i in range(len(names)):
+    for j in range(i+1):
+        print(names[i])
+
+
 
