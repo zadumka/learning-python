@@ -26,4 +26,30 @@ print(my_dict)
 d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
 print(d['k1'][2]['k2'][1]['tough'][2][0])
 
+# ? Задача: Список перетворити на словник, де влова будуть ключем а числа значенням (значення буде списком)
+
+a = ['first', 3, 5, 8, 'second', 10, 20, 'third', 34, 56, 70, 'fourth', -60]
+my_dict1 = {}
+curent_str = None
+
+for i in a:
+    if(type(i) == str):
+        my_dict1[i] = []
+        curent_str = i
+    else:
+        my_dict1[curent_str].append(i)
+print(my_dict1)
+
+# ? Задача: Підрахувати кількість слів в тексті
+my_text = 'основи алгоритмізації і програмування мовою Python основи мовою програмування основи'
+
+d1 = {}
+for e in my_text.split():
+    if e in d1:
+        d1[e] = d1[e] + 1
+    else:
+        d1[e] = 1
+print(d1)
+
+print(d1)
 
