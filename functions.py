@@ -1,4 +1,4 @@
-def function1():
+def function():
     print('Hello world')
 
 
@@ -125,5 +125,52 @@ def is_even(my_list):
 even_number = is_even(my_list)
 print(even_number)
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+def even_result(number):
+    return number % 2 == 0
+even_result(20)
+print(even_result(20))
 
+# ? повертнути істину, якщо в списку є парні числа
+def check_even_list(num_list):
+
+    for number in num_list:
+        if number % 2 == 0:
+            return True
+        else:
+            pass
+    return False
+print(check_even_list([1,5,7,9,6,80,66]))
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#! Tuple UNPACKING WITH PYTHON FUNCTIONS (розпаковка таплів)
+
+stock_prices = [('Apple',200),('Bananas', 150),('Oranges', 300)]
+for item in stock_prices:
+    print(item)
+#розпакивали лише назви товару
+for ticker, price in stock_prices:
+    print(ticker)
+# розпакували лише ціну товару
+for ticker, price in stock_prices:
+    print(price)
+# розпакували ціну товари та накинули націнку +10%
+for ticker, price in stock_prices:
+    print(price+ (0.1*price))
+
+# ? розпакувати тапли за допомогою функцію можна наступним способом
+
+work_hours = [('Max', 136),('Victor',154),('Alex', 115),('Semmy',128)]
+
+def employee_check(work_hours):
+    current_max = 0
+    employee_of_month = ''
+    for employee,hours in work_hours:
+        if hours > current_max:
+            current_max = hours
+            employee_of_month = employee
+        else:
+            pass
+    return (employee_of_month,current_max)
+print(employee_check(work_hours))
