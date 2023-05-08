@@ -77,3 +77,49 @@ for i in range(len(names)):
 
 
 
+a = (10**2 / 2) + (25 * 2) + 0.25
+print(a)
+
+r=(5**2 * 4 / 2) + 50 + 0.25
+print(r)
+
+o = 3 + 1.5 + 4
+print(o)
+print(type(o))
+
+s = 'hello'
+print(s[1])
+
+st='hello'
+d = st[::-1]
+print(d)
+
+w = 'hello'
+q = w + 'o'
+print(q)
+
+new_list1=[0,0,0]
+print(new_list1)
+
+new_list2=[0]*3
+print(new_list2)
+
+list3 = [1,2,[3,4,'hello']]
+list3[2][2]='good bye'
+print(list3)
+
+list4 = [5,3,4,6,1]
+list4.sort()
+print(list4)
+
+d2 = {'simple_key':'hello'}
+print(d2['simple_key'])
+
+d3 = {'k1':{'k2':'hello'}}
+print(d3['k1']['k2'])
+
+d4 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+print(d4['k1'][0]['nest_key'][1][0])
+
+d5 = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
+print(d5['k1'][2]['k2'][1]['tough'][2][0])
