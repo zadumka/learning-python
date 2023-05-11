@@ -174,3 +174,9 @@ def employee_check(work_hours):
             pass
     return (employee_of_month,current_max)
 print(employee_check(work_hours))
+
+
+name = 'Bob'
+def hello_name(name):
+    return 'Hello '+ name + '!'
+print(hello_name(name))

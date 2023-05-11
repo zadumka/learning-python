@@ -38,7 +38,7 @@ mylist = [letter for letter in mystring]
 #print(mylist)
 
 my_list = [x for x in range(1, 11) if x % 2 == 0]
-#print(my_list)
+print(my_list)
 # Створити новий список з двух інших списків перемноживши їх між собою
 my_list1 = []
 
@@ -52,7 +52,7 @@ my_num = [x**2 for x in range(10)]
 #print(my_num)
 
 my_list = [num for num in range(11) if num%2==0]
-#print(my_list)
+print(my_list)
 
 
 a = 10
@@ -103,8 +103,7 @@ else:
 #mas1 = ['звук', 'колонка', 'кодування', 'модель']
 #print(mas1)
 
-N = [21,40,53,17,33]
-
+N = [21, 40, 53, 17, 33]
 num_mas = []
 for a in range(len(N)):
     n = int(input('Ввести ціле число : '))
