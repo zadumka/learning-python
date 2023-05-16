@@ -121,3 +121,5 @@ print(my_tupl.index('seven'))
 # count() - щоб підрахувати кількість разів появи значення
 my_tupl = (1, 3, 5, 'seven', 5, 3)
 print(my_tupl.count(5))
+
+
