@@ -193,3 +193,18 @@ def employee_check(work_hours):
     return (employee_of_month,current_max)
 work_hours = {'John':200, 'Tom':400, 'Sarah':300}
 print(employee_check(work_hours))
+
+#! задача: Визначте функцію під назвою myfunc, яка приймає рядок і повертає відповідний рядок,
+#! у якому кожна парна літера є верхньою, а кожна непарна – нижньою.
+string = 'completepython'
+def myfunc(string):
+    result = ""
+    for i in range(len(string)):
+        if i % 2 == 0:
+            result += string[i].upper()
+        else:
+            result += string[i].lower()
+        return result
+
+
+
