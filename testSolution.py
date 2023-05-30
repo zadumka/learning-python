@@ -136,3 +136,15 @@ def find3(nums):
 
 
 print(find3([1, 3, 2, 3]))
+
+
+def myfunc(string):
+    result = ""
+    for index, letter in enumerate(string):
+        if index % 2 == 0:
+            result += letter.upper()
+        else:
+            result += letter.lower()
+    return result
+newstring = myfunc('Anthropomorphism')
+print(newstring)

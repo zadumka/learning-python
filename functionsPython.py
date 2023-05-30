@@ -28,3 +28,16 @@ myfunc1(windows='close', fruit='apple',)
 def myfunc2(*args,**kwargs):
     print('I would like {} {}'.format(args[0],kwargs['food']))
 myfunc2(10,20,30,fruit = 'banana', food='apple', windows='close')
+
+def myfunc(*args):
+    return sum(args)
+print(myfunc(1,2,3))
+
+def myfunc(*args):
+    list = []
+    for num in args:
+        if num % 2 == 0:
+            list.append(num)
+    return list
+number = myfunc(3, 2, 5, 4, 7, 6)
+print(number)
