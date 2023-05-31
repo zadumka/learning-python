@@ -64,7 +64,7 @@ def animal_crackers(text):
     return wirdlist[0][0] == wirdlist[1][0]
 
 
-print(animal_crackers('Levelheaded Rlama'))
+print(animal_crackers('Levelheaded Llama'))
 
 
 # ! задано два цілі числа, повертає True, якщо сума цілих чисел дорівнює 20 або
@@ -95,7 +95,7 @@ def old_macdonald(name):
         return 'Name is too short!'
 
 
-print(old_macdonald('macdonald'))
+print(old_macdonald('macduck'))
 
 
 # !MASTER YODA: Дано речення, поверніть речення зі словами, перевернутими
@@ -113,7 +113,7 @@ def almost_there(n):
     return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 
 
-#print(almost_there(199))
+# print(almost_there(199))
 
 
 def almost_there1(n):
@@ -123,13 +123,13 @@ def almost_there1(n):
         return False
 
 
-#print(almost_there1(80))
+# print(almost_there1(80))
 
-#!Маючи список int, поверніть True, якщо масив десь містить 3 поруч із 3.
+# !Маючи список int, поверніть True, якщо масив десь містить 3 поруч із 3.
 
 def find3(nums):
-    for n in range(0, len(nums)-1):
-        if nums[n] == 3 and nums[n+1] == 3:
+    for n in range(0, len(nums) - 1):
+        if nums[n] == 3 and nums[n + 1] == 3:
             return True
 
     return False
@@ -138,6 +138,7 @@ def find3(nums):
 print(find3([1, 3, 2, 3]))
 
 
+# ? кожну парну літеру зробити великою
 def myfunc(string):
     result = ""
     for index, letter in enumerate(string):
@@ -146,5 +147,43 @@ def myfunc(string):
         else:
             result += letter.lower()
     return result
+
+
 newstring = myfunc('Anthropomorphism')
 print(newstring)
+
+
+# ! БЛЕКДЖЕК: Дано три цілі числа від 1 до 11, якщо їх сума менша або дорівнює 21, поверніть їх суму.
+# ! Якщо їх сума перевищує 21 і є одинадцять, зменшіть загальну суму на 10.
+# ! Нарешті, якщо сума (навіть після коригування) перевищує 21, поверніть «BUST»
+
+def blackjack(a, b, c):
+    if (a + b + c) <= 21:
+        return a + b + c
+    elif (a + b + c) > 21 and a == 11 or b == 11 or c == 11:
+        return (a + b + c) - 10
+    else:
+        return 'the sum more then 21'
+
+
+print(blackjack(9, 9, 10))
+
+
+# ! SUMMER OF '69:Повернути суму чисел у масиві, ігноруючи відрізки чисел,
+# ! які починаються з 6 і продовжуються до наступної 9 (кожне число 6 буде наступати принаймні одне число 9).
+# ! Повернути 0, якщо немає жодних чисел.
+
+def summer_69(arr):
+    total = 0
+    for num in arr:
+        if 6 <= num <= 9:
+            continue
+        else:
+            total += num
+    return total
+
+
+print(summer_69([4, 5, 6, 7, 1, 8, 9]))
+print(summer_69([1, 3, 5]))
+print(summer_69([4, 5, 6, 7, 8, 9]))
+print(summer_69([2, 1, 6, 9, 11]))
