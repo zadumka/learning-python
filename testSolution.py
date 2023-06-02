@@ -108,12 +108,20 @@ def master_yoda(text):
 
 print(master_yoda('home am I'))
 
-
+#! ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
 def almost_there(n):
     return ((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 
 
-# print(almost_there(199))
+print(almost_there(90))
+#--> True
+print(almost_there(104))
+#--> True
+print(almost_there(150))
+#--> False
+print(almost_there(209))
+#--> True
+
 
 
 def almost_there1(n):
@@ -160,30 +168,65 @@ print(newstring)
 def blackjack(a, b, c):
     if (a + b + c) <= 21:
         return a + b + c
-    elif (a + b + c) > 21 and a == 11 or b == 11 or c == 11:
+    elif (a + b + c) <= 31 and 11 in (a, b, c):
         return (a + b + c) - 10
     else:
         return 'the sum more then 21'
 
 
 print(blackjack(9, 9, 10))
+print(blackjack(5, 6, 7))
+#--> 18
 
+print(blackjack(9, 9, 9))
+#--> 'BUST'
+
+print(blackjack(9, 10, 11))
+#--> 19
 
 # ! SUMMER OF '69:Повернути суму чисел у масиві, ігноруючи відрізки чисел,
 # ! які починаються з 6 і продовжуються до наступної 9 (кожне число 6 буде наступати принаймні одне число 9).
 # ! Повернути 0, якщо немає жодних чисел.
 
-def summer_69(arr):
-    total = 0
-    for num in arr:
-        if 6 <= num <= 9:
-            continue
-        else:
-            total += num
-    return total
+# def summer_69(arr):
+#     total = 0
+#     for num in arr:
+#         if 6 <= num <= 9:
+#             continue
+#         else:
+#             total += num
+#     return total
 
 
 print(summer_69([4, 5, 6, 7, 1, 8, 9]))
 print(summer_69([1, 3, 5]))
 print(summer_69([4, 5, 6, 7, 8, 9]))
 print(summer_69([2, 1, 6, 9, 11]))
+print(summer_69([2, 1, 6]))
+#! SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+
+#def spy_game(nums):
+
+#        if num in nums([0, 0, 7]):
+ #           return True
+  #      else:
+   #         return 'There are no such integers'
+
+#print(spy_game([1, 2, 4, 0, 0, 7, 5]))
+
+def blackjack(a, b, c):
+    if sum((a, b, c)) <= 21:
+        return sum((a, b, c))
+    elif sum((a, b, c)) <= 31 and 11 in (a, b, c):
+        return sum((a, b, c)) - 10
+    else:
+        return 'BUST'
+print(blackjack(9, 9, 10))
+
+print(blackjack(5, 6, 7))
+#--> 18
+
+print(blackjack(9, 9, 9))
+#--> 'BUST'
+
+print(blackjack(9, 10, 11))
