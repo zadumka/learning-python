@@ -4,3 +4,5 @@ print(my_tupl[-1])
 print(my_tupl)
 print(my_tupl.index('seven'))
 print(my_tupl.count('seven'))
+
+

@@ -1,4 +1,4 @@
-# Basic Built-in String methods
+#* Basic Built-in String methods
 
 #Ми називаємо методи з періодом, а потім назвою методу. Методи бувають у вигляді:
 
@@ -61,7 +61,7 @@ my_lists = ['one', 'two', 'three', 'six', 'ten', 'five', 'seven', 'six']
 my_lists.reverse()
 print(my_lists)
 
-# Dictionary Methods
+#* Dictionary Methods
 # clear(): видаляє всі елементи словника.
 my_dict = {'apple': 1, 'banana': 2, 'orange': 3}
 print(my_dict.clear())
@@ -111,7 +111,7 @@ dict_lists = {'one': 1, 'two': 2, 'three': 3, 'six': 6, 'ten': 10, 'five': 5, 's
 print(dict_lists.values())
 
 
-#Basic Tuple Methods
+#* Basic Tuple Methods
 
 # index() - щоб ввести значення та повернути індекс
 my_tupl = (1, 3, 5, 'seven', 5, 3)
