@@ -103,11 +103,14 @@ else:
 #mas1 = ['звук', 'колонка', 'кодування', 'модель']
 #print(mas1)
 
-N = [21, 40, 53, 17, 33]
-num_mas = []
-for a in range(len(N)):
-    n = int(input('Ввести ціле число : '))
-    num_mas.append(n)
-print('масив : ' , num_mas)
+#N = [21, 40, 53, 17, 33]
+#num_mas = []
+#for a in range(len(N)):
+#    n = int(input('Ввести ціле число : '))
+#    num_mas.append(n)
+#print('масив : ' , num_mas)
+
+
+
 
 
